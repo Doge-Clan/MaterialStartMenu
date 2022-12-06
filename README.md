@@ -10,6 +10,6 @@ I wanted a basic home menu for the Geogbra classic, it still needs some work but
 - [x] Prototype
 - [ ] Configuration
 - [ ] GitHub Page Instance
-- [ ] Integrated Search Menu
+- [x] Integrated Search Menu
 - [ ] Stealth Mode?
-- [ ] Custom Routing of Pages?
+- [ ] Custom Routing of Pages through another server (Proxying)?
