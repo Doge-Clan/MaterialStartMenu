@@ -9,7 +9,7 @@ I wanted a basic home menu for the Geogbra classic, it still needs some work but
 ## Development Progress:
 - [x] Prototype
 - [ ] Configuration
-- [ ] GitHub Page Instance
-- [x] Integrated Search Menu
+- [x] GitHub Page Instance
+- [ ] Integrated Search Menu
 - [ ] Stealth Mode?
 - [ ] Custom Routing of Pages through another server (Proxying)?
