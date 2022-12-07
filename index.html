@@ -1,66 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Material Start Menu</title>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<style>
-			body {
-				margin: 0px;
-				padding: 0px;
-				background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				color: white;
-				font-family: sans-serif;
-				overflow: hidden;
-				min-height: 100vh;
-			}
+  <head>
+	<meta charset="UTF-8">
+	<title>Material Start Menu</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+	  body {
+	    margin: 0px;
+		padding: 0px;
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		font-family: sans-serif;
+		overflow: hidden;
+		min-height: 100vh;
+	  }
 
-			button {
-				background: none;
-				border: none;
-				color: white;
-				width: 128px;
-				height: 128px;
-			}
+	  button {
+		background: none;
+	    border: none;
+		color: white;
+		width: 128px;
+		height: 128px;
+	  }
 
-			button:hover {
-				width: 148px;
-				height: 148px;
-				font-size: 148px;
-			}
+	  button:hover {
+		width: 148px;
+		height: 148px;
+		font-size: 148px;
+	  }
 
-			.container {
-				width: 100%;
-				display: flex;
-  			justify-content: center;
-			}
+      #searchbar {
+        position: absolute;
+        top: calc(50% - 128px - 10vh);
+        height: 10vh;
+        width: 80%;
+        font-size: 3vh;
+        border-radius: 12px;
+        border: 1px;
+      }
+      
+	  .container {
+		width: 100%;
+		display: flex;
+  		justify-content: center;
+	   }
 
-			.center {
-				margin: 0;
-  			position: absolute;
-  			top: 50%;
-  			transform: translateY(-50%);
-				text-align: center;	
-			}
+	  .center {
+		margin: 0;
+  		position: absolute;
+  		top: 50%;
+  		transform: translateY(-50%);
+	    text-align: center;	
+	   }
 
-			.px128 {
-				font-size: 128px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="center">
-				<button type="button" class="material-icons px128" onclick="redirect('https://duckduckgo.com/')" title="DuckDuckGo">language</button>
-				<button type="button" class="material-icons px128" onclick="redirect('https://api.invidious.io/')" title="Invidious // YouTube">smart_display</button>
-				<button type="button" class="material-icons px128" onclick="redirect('https://discord.app/')" title="Discord">chat</button>
-				<button type="button" class="material-icons px128" onclick="alert('Material Start Menu\n(C) 2022 Doge Clan, Licensed under the MIT License');" title="About">help</button>
-			</div>
-		</div>
-	</body>
-	<script>
-		function redirect(url) {
-			window.location.href = url;
-		}
-	</script>
+	   .px128 {
+		font-size: 128px;
+	   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!--
+    <input type='text' id='searchbar' placeholder='Search the Web'>
+    -->
+    <div class="center">
+      <button type="button" class="material-icons px128" onclick="redirect('https://github.com/Doge-Clan/')" id='github' title="Doge Clan GitHub">merge</button>
+      <button type="button" class="material-icons px128" onclick="redirect('https://duckduckgo.com/')" id='browser' title="DuckDuckGo">language</button>
+	  <button type="button" class="material-icons px128" onclick="redirect('https://discord.app/')" id='chat' title="Discord">chat</button>
+      	  <button type="button" class="material-icons px128" onclick="redirect('https://api.invidious.io/')" id='videos' title="Invidious // YouTube">smart_display</button>
+	  <button type="button" class="material-icons px128" onclick="alert('Material Start Menu\n(C) 2022 Doge Clan, Licensed under the MIT License');" title="About">help</button>
+	</div>
+  </div>
+</body>
+<script>
+  function redirect(url) {
+	window.location.href = url;
+  } // So me, the dumb dumb, does not forget
+
+  function search() {
+    
+  }
+</script>
 </html>
