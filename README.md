@@ -1,5 +1,5 @@
 # MaterialStartMenu
-A Material Icon Start Menu. Made within less than an hour but it still a basic tool for the Geogbra Classic exploit.
+URL: https://doge-clan.github.io/MaterialStartMenu/
 
 ## Why?
 I wanted a basic home menu for the Geogbra classic, it still needs some work but I think it is good enough. 
