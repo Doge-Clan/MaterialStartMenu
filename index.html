@@ -37,6 +37,7 @@
         font-size: 3vh;
         border-radius: 12px;
         border: 1px;
+        outline: none;
       }
       
 	  .container {
@@ -58,27 +59,54 @@
 	   }
   </style>
 </head>
-<body>
-  <div class="container">
-    <!--
-    <input type='text' id='searchbar' placeholder='Search the Web'>
-    -->
-    <div class="center">
-      <button type="button" class="material-icons px128" onclick="redirect('https://github.com/Doge-Clan/')" id='github' title="Doge Clan GitHub">merge</button>
-      <button type="button" class="material-icons px128" onclick="redirect('https://duckduckgo.com/')" id='browser' title="DuckDuckGo">language</button>
-	  <button type="button" class="material-icons px128" onclick="redirect('https://discord.app/')" id='chat' title="Discord">chat</button>
-      	  <button type="button" class="material-icons px128" onclick="redirect('https://api.invidious.io/')" id='videos' title="Invidious // YouTube">smart_display</button>
-	  <button type="button" class="material-icons px128" onclick="alert('Material Start Menu\n(C) 2022 Doge Clan, Licensed under the MIT License');" title="About">help</button>
-	</div>
-  </div>
-</body>
-<script>
+  <body>
+  <div class="container" id='container'>
+    <input type='text' id='searchbar' placeholder='Search the Web' onkeydown='search(this.innerHTML)'>
+      <div class="center">
+        <button type="button" class="material-icons px128" onclick="redirect('https://github.com/Doge-Clan/')" id='github' title="Doge Clan GitHub">merge</button>
+        <button type="button" class="material-icons px128" onclick="redirect('https://duckduckgo.com/')" id='browser' title="DuckDuckGo">language</button>
+        <button type="button" class="material-icons px128" onclick="redirect('https://api.invidious.io/')" id='videos' title="Invidious // YouTube">smart_display</button>
+	    <button type="button" class="material-icons px128" onclick="loadConfigMenu()" title="Configuration Menu (WIP)">settings</button>
+	  </div>
+    </div>
+  </body>
+    <script>
+  /*
+    The spaghetti code that powers a basic start menu. I wrote this just as a start menu for my meh
+    school computer. That is it.
+  */
+  
   function redirect(url) {
 	window.location.href = url;
   } // So me, the dumb dumb, does not forget
 
-  function search() {
-    
+  function search(input) {    
+    // On Search
+    if(event.key === 'Enter') {
+      if (input.includes('http://') || input.includes('https://')) {
+        redirect(input); // Redirect with direct URL case
+      } else {
+        redirect('https://google.com/search?q=' + input)
+      }
+    }
   }
+  
+  // The Configuration Menu
+  const HomeMenu = document.getElementById('container').innerHTML;
+  
+  function loadHomeMenu() {
+    let c = document.createElement('div')
+    c.classList.add('container')
+    c.id = 'container'
+    c.innerHTML = HomeMenu;
+    
+    document.body.appendChild(c)
+  }
+    
+  function loadConfigMenu() {
+    document.body.removeChild(document.getElementById('container'));
+    
+    
+  } // Behold, the legend
 </script>
 </html>
