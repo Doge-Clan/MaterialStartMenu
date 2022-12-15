@@ -1,5 +1,4 @@
-# MaterialStartMenu
-URL: https://doge-clan.github.io/MaterialStartMenu/
+# [Material Start Menu](https://doge-clan.github.io/MaterialStartMenu/)
 
 ## Why?
 I wanted a basic home menu that is kind-of alright (For my own computer).
